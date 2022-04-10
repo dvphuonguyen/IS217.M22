@@ -1,0 +1,18 @@
+delete from [dbo].[FactHotelBooking];
+delete from [dbo].[ArrivalTime];
+delete from [dbo].[Customer];
+delete from [dbo].[CustomerType];
+delete from [dbo].[DepositType];
+delete from [dbo].[DistributionChannel];
+delete from [dbo].[HotelType];
+delete from [dbo].[MarketSegment];
+delete from [dbo].[ReservationStatus];
+delete from [dbo].[ReservationDate];
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+CREATE TABLE [ArrivalTime] (
+    [id_arrival_date] int primary key,
+    [arrival_date_full] datetime,
+    [arrival_date_year] int,
+    [arrival_date_quarter] int,
+    [arrival_date_month_number] int,
+    [arrival_date_month_name] varchar(255),
+    [arrival_date_month_name_abbrev] varchar(255),
+    [arrival_date_week_number] int,
+    [arrival_date_day_of_month] int,
+    [arrival_date_day_of_week] int,
+    [arrival_date_day_name_abbrev] varchar(255),
+    [arrival_date_day_name] varchar(255),
+    [arrival_date_weekday_flag] int
+)

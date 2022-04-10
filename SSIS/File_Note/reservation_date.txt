@@ -1,0 +1,9 @@
+CREATE TABLE [ReservationDate] (
+    [id_reservation_status_date] int primary key,
+    [reservation_status_date] datetime,
+    [reservation_date_day] int,
+    [reservation_date_month] int,
+    [reservation_date_quarter] int,
+    [reservation_date_year] int,
+    [reservation_date_day_of_year] int
+)

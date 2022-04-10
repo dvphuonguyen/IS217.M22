@@ -1,0 +1,4 @@
+CREATE TABLE [CustomerType] (
+    [id_customer_type] int primary key,
+    [customer_type] varchar(255)
+)
