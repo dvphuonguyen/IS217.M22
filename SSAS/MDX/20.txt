@@ -1,0 +1,4 @@
+SELECT [Measures].[Fact Hotel Booking Count] ON COLUMNS, NON
+EMPTY{[Customer].[Country].CHILDREN}
+HAVING [Measures].[Fact Hotel Booking Count]>6095 ON ROWS
+FROM [DB DATAWAREHOUSE]

@@ -1,0 +1,6 @@
+With member [Measures].[Turnover] 
+as [Measures].[Adr] ,FORMAT_STRING = 'Currency'
+
+Select {[Measures].[Turnover], [Measures].[Fact Hotel Booking Count]} on Rows , 
+NON EMPTY{ [Hotel Type].[Hotel Type].Children * [Arrival Time].[Arrival Date Year].Children} on Columns
+From [DB DATAWAREHOUSE];

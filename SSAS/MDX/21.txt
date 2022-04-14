@@ -1,0 +1,21 @@
+WITH MEMBER [Measures].CaseResult AS   
+CASE 
+   WHEN ([Measures].[Adr] > 500 AND [Measures].[Is Repeated Guest]= 1) THEN "Khách hàng thân thiết"  
+   WHEN ([Measures].[Adr] > 500 AND [Measures].[Is Repeated Guest]= 0) THEN "Khách hàng tiềm năng" 
+   ELSE "Khách hàng vãng lai"
+END  
+
+
+SELECT	{	[Measures].[Adr], [Measures].[Is Repeated Guest], [Measures].CaseResult} ON COLUMNS,
+		NON EMPTY {	TOPCOUNT(	([Customer].[Id Customer].CHILDREN * (	Filter(	
+																	[Customer].[Name].CHILDREN, 
+																	Left([Customer].[Name].CurrentMember.Name, 1) = "D"
+																	)
+														)
+					), 
+					5,
+					[Measures].[Adr]
+				)
+		} ON ROWS
+FROM [DB DATAWAREHOUSE]
+WHERE [Customer].[Country].&[PRT]

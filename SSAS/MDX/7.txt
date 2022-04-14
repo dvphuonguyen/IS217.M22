@@ -1,0 +1,12 @@
+SELECT	{	[Measures].[Fact Hotel Booking Count]} ON COLUMNS,
+		NON EMPTY {		TAIL(
+								ORDER(	
+											[Customer].[Country].CHILDREN,
+											[Measures].[Fact Hotel Booking Count],
+											ASC
+										),
+								10
+							)
+		} ON ROWS
+FROM [DB DATAWAREHOUSE]
+WHERE [Arrival Time].[Arrival Date Year].&[2.016e3]

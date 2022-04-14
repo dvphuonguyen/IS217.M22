@@ -1,0 +1,457 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ba989f56-5f60-4dfc-807c-4c01b08a2cc7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Reservation Date</ID>
+  <Name>Reservation Date</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-712" scrolltop="-3854" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6403" y="11007" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ReservationDate" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4939" height="3298" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004b130000e20c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_ReservationDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-712</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-3854</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="203" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="277">
+            <Shape Id="Id Reservation Status Date" Expanded="false">
+              <Attributes>
+                <Attribute Id="Id Reservation Status Date" />
+              </Attributes>
+              <Position x="223" y="20" />
+            </Shape>
+            <Shape Id="Reservation Status Date" Expanded="false">
+              <Attributes>
+                <Attribute Id="Reservation Status Date" />
+              </Attributes>
+              <Position x="574" y="20" />
+            </Shape>
+            <Shape Id="Reservation Date Day" Expanded="false">
+              <Attributes>
+                <Attribute Id="Reservation Date Day" />
+              </Attributes>
+              <Position x="925" y="20" />
+            </Shape>
+            <Shape Id="Reservation Date Day Of Year" Expanded="false">
+              <Attributes>
+                <Attribute Id="Reservation Date Day Of Year" />
+              </Attributes>
+              <Position x="1276" y="20" />
+            </Shape>
+            <Shape Id="Reservation Date Month" Expanded="false">
+              <Attributes>
+                <Attribute Id="Reservation Date Month" />
+              </Attributes>
+              <Position x="1628" y="20" />
+            </Shape>
+            <Shape Id="Reservation Date Quarter" Expanded="false">
+              <Attributes>
+                <Attribute Id="Reservation Date Quarter" />
+              </Attributes>
+              <Position x="1979" y="20" />
+            </Shape>
+            <Shape Id="Reservation Date Year" Expanded="false">
+              <Attributes>
+                <Attribute Id="Reservation Date Year" />
+              </Attributes>
+              <Position x="2330" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="2dec9a99-855c-4682-82dd-65bfdf3501c6">
+    <DataSourceViewID>DB DATAWAREHOUSE</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="a3ee2729-33b2-4d7e-979f-0a3d7d29b6c9">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="d683d60d-77ac-4c71-82df-7c6cdcf01f2b">
+      <ID>Id Reservation Status Date</ID>
+      <Name>Id Reservation Status Date</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3f1f3368-6b75-4eee-9ec2-0a1609dd2fb6">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bd3b97a4-d291-4758-b979-9f2eb1e0a09a">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>id_reservation_status_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="02706c1b-73d1-49f1-9c5c-1dcc982bddf4">
+          <AttributeID>Reservation Status Date</AttributeID>
+          <Name>Reservation Status Date</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e5307834-2113-45ac-becd-9bd2d2b0dbdf">
+      <ID>Reservation Status Date</ID>
+      <Name>Reservation Status Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8bb8d995-c01d-4106-8751-410053a75957">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="291e4fc2-4bd1-4532-aa3b-fe8f534a7168">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_status_date</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="235f9e10-a5fb-4e8b-b5a6-43896b943c23">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c2f2031d-d6a9-4023-b202-735f34de729c">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_day</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="2e48bb5c-4c95-4a4a-acdf-9c6953762922">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="56ec75e5-7ab9-47e9-89ef-8bd12b127cb5">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_day_of_year</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="eb1e18fc-6859-4efd-bb6a-37676c4f1f71">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f46ff674-669b-4db8-a165-bede75f6a922">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_month</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="ab3dd24c-aeb1-4b57-a88b-00db67a3ba99">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7ba024a2-aaa7-4030-8a48-d15405f0041d">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="9554804d-62eb-4218-a2f8-c7d45ca61c36">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a7794a5f-32a6-494b-bcc1-07c2299aa44d">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="9d0a47dc-8cd3-457d-9aa8-359dc7b9f51f">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="234f9bec-bd61-4543-8133-8191bb95d508">
+          <TableID>dbo_ReservationDate</TableID>
+          <ColumnID>reservation_status_date</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="8050a5c0-de3e-49a7-9939-597d39a1e5d6">
+          <AttributeID>Reservation Date Day</AttributeID>
+          <Name>Reservation Date Day</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8ec0fc12-a329-4166-979a-03d2538c1b34">
+      <ID>Reservation Date Day</ID>
+      <Name>Reservation Date Day</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="99936a48-32fe-4faf-9ab8-b1cfa8040157">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="28a2a9b7-bc0c-49d3-9cdb-93add4b538bb">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_day</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="e36a6917-6bf1-4ffa-8a2a-c6e3a94b31b7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e8199e43-ea90-4465-9e76-671494296702">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_day_of_year</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="859ff40c-6b2b-4e9b-b84f-3a153f260f92">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="37be1784-2593-4f5a-8dd9-63e5ba0a7833">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_month</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="7b8427d7-fabb-4eb6-8283-246ce1df264a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="87139b00-b1b5-47b7-b7ec-8e93b87109ea">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="b3d48b5f-aa79-403c-8aea-a8cd1c36a709">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="451a0eac-5902-464e-8db3-810d47b8c0d8">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="05d612b1-d187-49e4-83a7-b50fb6d4a186">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="2c58db85-8b86-473c-b06d-4558459e6ad3">
+          <TableID>dbo_ReservationDate</TableID>
+          <ColumnID>reservation_date_day</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ee072b13-7265-4d28-8086-de6d68f309e1">
+          <AttributeID>Reservation Date Day Of Year</AttributeID>
+          <Name>Reservation Date Day Of Year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bda24f6e-b959-4185-a4fb-b9c1b102fbdc">
+      <ID>Reservation Date Month</ID>
+      <Name>Reservation Date Month</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8f278a7e-4094-4de9-a7c5-b5e33eca4877">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="96494bf7-998c-45d1-9350-924cd514df89">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_month</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="47bdab29-3753-4925-bcbd-5a8aec9cde26">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="86e92421-d3b4-4c4a-b6fa-4368cb44981f">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="60b68e0f-6023-476b-a1d0-10d9e11cd42d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7157286a-fdc1-4f0b-ad81-d6c87c4000ff">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6b6ad7f1-9304-44af-befa-ada105867869">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="384071b5-8dc6-4364-a05a-d7d4a8742060">
+          <TableID>dbo_ReservationDate</TableID>
+          <ColumnID>reservation_date_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b7ad074f-acce-424a-a1f7-325d646f860e">
+          <AttributeID>Reservation Date Quarter</AttributeID>
+          <Name>Reservation Date Quarter</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0d811a61-301d-4279-a8fe-47f80f8b5c2e">
+      <ID>Reservation Date Quarter</ID>
+      <Name>Reservation Date Quarter</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="65629d45-0d31-416d-94cf-60490a766227">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="492a3575-1748-4692-9250-a1cb08e0dc16">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="c3345473-fced-4d1f-838e-6b26fa30b84c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b2abdab0-e29c-4243-85c0-f8a81def5066">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="fbe56893-11aa-4392-a0a4-542614cef26e">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b38d83c1-ee4d-4022-aa7f-cb4f8590f160">
+          <TableID>dbo_ReservationDate</TableID>
+          <ColumnID>reservation_date_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="01007693-fe47-4348-aa96-cec52bc00919">
+          <AttributeID>Reservation Date Year</AttributeID>
+          <Name>Reservation Date Year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6489ad59-ba4d-4149-aceb-77dd74d9f33d">
+      <ID>Reservation Date Year</ID>
+      <Name>Reservation Date Year</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f5b39563-b2ae-4732-8ae2-4fe2fbec9ab0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="856febe2-340c-4bff-b3ee-eb37ad14a446">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e4d21f9b-57ea-45a1-879b-4802bcce0299">
+      <ID>Reservation Date Day Of Year</ID>
+      <Name>Reservation Date Day Of Year</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="89054ee8-62c2-4c6c-9f8a-977de69e1ec6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="224701ae-1e83-4c21-a2a0-ac844fb9b9ef">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_day_of_year</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="c6f05596-9ab5-4dc6-8d1c-75cf964cde8d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="68597328-1ff0-40bf-be7e-2cdd37c200c9">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_month</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="becbf0b0-9840-4aba-a6ad-ae411c056866">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="73eeda4f-c0c3-4081-97ff-35f1e10e5a69">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="c38f7461-df58-487e-acf1-399be0bea77d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4812f948-9f2b-4244-b0c5-44e3856e904b">
+            <TableID>dbo_ReservationDate</TableID>
+            <ColumnID>reservation_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="a1c82900-e4f8-4b28-b00d-dd4fba23446a">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5183067b-50a8-4192-b3e7-2ad097b68469">
+          <TableID>dbo_ReservationDate</TableID>
+          <ColumnID>reservation_date_day_of_year</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="7ba8acb5-e3b5-4361-a4fd-e6b056af378b">
+          <AttributeID>Reservation Date Month</AttributeID>
+          <Name>Reservation Date Month</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="008f503e-f78a-49ab-82ac-d913573b4349">
+      <ID>Hierarchy</ID>
+      <Name>PhanCapNgayDatPhong(YQMDD)</Name>
+      <Levels>
+        <Level dwd:design-time-name="72a914c2-f58a-4a6d-a622-3c4275337bb7">
+          <ID>Reservation Date Year</ID>
+          <Name>Reservation Date Year</Name>
+          <SourceAttributeID>Reservation Date Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="ea944f06-0862-49d7-8920-2f2b7bc30189">
+          <ID>Reservation Date Quarter</ID>
+          <Name>Reservation Date Quarter</Name>
+          <SourceAttributeID>Reservation Date Quarter</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="10c59002-ca09-4d26-9976-eda29c39497f">
+          <ID>Reservation Date Month</ID>
+          <Name>Reservation Date Month</Name>
+          <SourceAttributeID>Reservation Date Month</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="a9ce2ed5-802b-4238-9df8-e872c1352568">
+          <ID>Reservation Date Day Of Year</ID>
+          <Name>Reservation Date Day Of Year</Name>
+          <SourceAttributeID>Reservation Date Day Of Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b911e965-bdb8-4cf4-906b-17debc686a95">
+          <ID>Reservation Date Day</ID>
+          <Name>Reservation Date Day</Name>
+          <SourceAttributeID>Reservation Date Day</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="189b4edb-7070-403f-9b30-735438be6940">
+          <ID>Reservation Status Date</ID>
+          <Name>Reservation Status Date</Name>
+          <SourceAttributeID>Reservation Status Date</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

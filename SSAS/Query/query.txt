@@ -1,0 +1,25 @@
+1.1.	Thống kê thời gian có lượng khách đặt phòng nhiều nhất theo thứ trong tuần, số thứ tự tuần trong năm, tháng trong năm.
+--1.2.	Thống kê tổng số lượng khách hàng đặt phòng, tổng doanh thu của từng loại khách sạn theo từng năm.
+--1.3.	Thống kê có bao nhiêu khách hàng là người lớn, bao nhiêu khách hàng là trẻ em và bao nhiêu khách hàng là em bé trong từng tháng của từng năm. 
+1.4.	Thống kê thời gian trung bình khách hàng phải đặt phòng trước khi đến khách sạn để có thể có phòng thành công. theo từng quý trong từng năm.
+1.5.	 Thống kê sự biến động về trạng thái đặt phòng của khách hàng trong khoảng thời gian từ năm 2015 đến năm 2017.
+(sửa)--1.6.	Liệt kê khách hàng của từng loại khách hàng có doanh số cao nhất trong năm 2017.
+(sửa)--1.7.	Cho biết top 10 quốc gia mang đến lượng khách du lịch cao nhất trong năm 2016, sắp xếp các giá trị theo thứ tự tăng dần.
+1.8.	Thống kê lượng khách đã hàng hủy đặt phòng khi tiến hành tham gia du lịch dựa vào phân khúc kinh doanh là "Online TA " và kênh phân phối "Corporate" tại khách sạn thành phố trong năm 2016.
+1.9.	Liệt kê các khách hàng đã có lượng thay đổi yêu cầu nhiều hơn 10 lần nhưng lại hủy đặt phòng tại khách sạn.
+1.10.	Cho biết các loại bữa ăn được lựa chọn khi tiến hành đặt phòng thuộc và lượng lựa chọn theo từng quý của từng năm.
+**1.11.	 Cho biết top 3 những kênh phân phối đạt số lượng khách hàng thuê phòng thành công nhiều nhất vào ngày cuối tuần trong từng quý của từng năm.
+**1.12.	 Liệt kê mã loại phòng có số lượng khách hàng muốn đặt cao nhất và thấp nhất (với mã loại phòng nhận được khi tới khách sạn cao nhất và thấp nhất) của từng tháng trong năm.
+**1.13.	 Liệt kê tháng trong năm và số lượng nhận phòng khi đến khác với số lượng phòng đã đặt của từng tháng trong năm.
+**1.14.	Thống kê số lượt thuê phòng của các khách hàng thuê phòng trong ngày trong tuần nhưng không thuê các ngày cuối tuần và có đặt cọc tiền của từng thành phố trong từng tháng trong năm 2017.
+**1.15.	 Liệt kê tên khách hàng, email, số điện thoại, loại khách hàng khi có ngày cập nhật trạng thái đặt phòng vào tháng 11 năm 2015 mà đã từng hủy không quá 5 lần đặt phòng trước đó và từng tham quan các khách sạn nhiều hơn 10 lần trước thời gian đó.
+(sửa)1.16.	Thống kế doanh thu của lượt đặt phòng có khách hàng mà trong ngày đó có các khách hàng từ phân khúc kinh doanh là "Offline TA/TO" và cả phân khúc kinh doanh là "Direct" nhưng không có khách hàng có lượng đăng ký thuê phòng cho tổng người trẻ em lớn hơn em bé 
+1.17.	Tìm những ngày đến khách sạn của khách hàng đến vào tháng 8 năm 2017 có hỗ trợ tất cả các loại bữa ăn cho các khách hàng.
+**1.18.	Thống kê doanh thu từ tuần thứ 20 đến tuần thứ 25 của mỗi năm có khách hàng quay lại đặt phòng và có quốc tịch là USA hoặc (lượt đặt phòng đó có đặt cọc một phần và không trạng thái đặt phòng là "Check out" vào ngày 7 đến ngày 15.
+
+
+--1.19. Liệt kê số lượng đơn đặt phòng ở ‘China’ và ‘Việt Nam’ theo từng năm và loại khách hàng là ‘Transient’ (WHERE nhiều thuộc tính kết hợp) 
+--1.20. Tìm các quốc gia có số lượng đơn đặt phòng lớn hơn 6095
+--1.21. Liệt kê 5 khách hàng có tên bắt đầu bằng chữ D ở Bồ Đào Nha (PRT), nếu khách hàng có tổng chi tiêu > 500 và là khách hàng quay lại thì xuất "Khách hàng thân thiết". Nếu tổng chi tiêu > 500 và là khách hàng lần đầu tiên tới thì xuất "Khách hàng tiềm năng". Ngược lại xuất "Khách hàng vãng lai."
+--1.22. Liệt kê các quốc gia thu được lợi nhuận năm 2017 nhiều hơn năm 2016 và sắp xếp theo lợi nhuận giảm dần
+--1.23. Liệt kê các phân khúc thị trường mà tổng Doanh thu của của kênh phân phối "Corporate" đó cộng lại tố thiếu 500 (lấy theo thứ tự doanh thu tăng dần) hoặc những phân khúc thị trường có số lượng lượt đặt phòng của kênh phân phối "Direct" tối thiểu 500

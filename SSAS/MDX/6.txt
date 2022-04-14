@@ -1,0 +1,12 @@
+SELECT	{	[Measures].[Adr]} ON COLUMNS,
+		NON EMPTY {	GENERATE (
+								[Customer].[Customer Type].[Customer Type].MEMBERS,
+								TOPCOUNT(	
+											CROSSJOIN([Customer].[Customer Type].CURRENTMEMBER, [Customer].[Name].CHILDREN),
+											1,
+											[Measures].[Adr]
+										)
+								)
+		} ON ROWS
+FROM [DB DATAWAREHOUSE]
+WHERE [Arrival Time].[Arrival Date Year].&[2.017e3]

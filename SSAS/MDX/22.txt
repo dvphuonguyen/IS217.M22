@@ -1,0 +1,30 @@
+
+
+With Member [Measures].[Adr 2017] As
+		IIF (([Measures].[Adr], [Arrival Time].[Arrival Date Year].&[2017]) = Null, 0, ([Measures].[Adr], [Arrival Time].[Arrival Date Year].&[2017]))
+	 Member [Measures].[Adr 2016] As
+		IIF (([Measures].[Adr], [Arrival Time].[Arrival Date Year].&[2016]) = Null, 0, ([Measures].[Adr], [Arrival Time].[Arrival Date Year].&[2016]))
+	 Member [Measures].[Profit Percent] As 
+		CASE 
+		   WHEN ([Measures].[Adr 2017] <> 0 and [Measures].[Adr 2016] <> 0 )THEN [Measures].[Adr 2017] / [Measures].[Adr 2016]  
+		   ELSE 0
+		END  ,Format_String = 'Percent'
+Select	{	
+			[Measures].[Adr 2017], 
+			[Measures].[Adr 2016],
+			[Measures].[Profit Percent]
+		} on Columns,
+		NON EMPTY{ 
+			FILTER(
+					Order(
+						([Customer].[Country].CHILDREN),
+						[Measures].[Profit Percent],
+						DESC
+					),
+					[Measures].[Profit Percent] > 1
+					)
+		} on Rows
+From [DB DATAWAREHOUSE]
+
+
+
