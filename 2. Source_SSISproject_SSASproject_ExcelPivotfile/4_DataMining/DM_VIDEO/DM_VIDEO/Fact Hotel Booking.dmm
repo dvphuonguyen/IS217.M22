@@ -1,0 +1,1126 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e00fbd8a-7360-446d-9f6e-636eff8a9899" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact Hotel Booking</ID>
+  <Name>Fact Hotel Booking</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_FactHotelBooking</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5695" scrolltop="-719" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="22490" y="10107" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactHotelBooking" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="5345" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000e114000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactHotelBooking" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-5695</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-719</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="8b8fc19d-3936-436e-9d6b-febe3889bc70">
+    <DataSourceViewID>DB DATAWAREHOUSE</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7b62adc1-db70-40af-8007-138e251639a8">
+      <ID>Adr</ID>
+      <Name>Adr</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="811dbc8f-7eef-4fea-a0bc-e5fd2ae1e420">
+          <DataType>Single</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b5aa6f78-b66a-4d8a-9f64-7275fb5da584">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>adr</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="45469ebd-7521-403d-89b6-7bf5d8941e54">
+      <ID>Adults</ID>
+      <Name>Adults</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3edf62a5-7d97-48d3-85ad-0823e0ae87fc">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="90515d53-57b5-4222-986e-175c8becddb6">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>adults</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="37de0aee-a7b4-4348-8425-cdd770feef73">
+      <ID>Assigned Room Type</ID>
+      <Name>Assigned Room Type</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3da475b1-aab9-4a40-bc51-3815563717fc">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6ca4f6c6-242f-48b5-844b-34ab47fe1ee6">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>assigned_room_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a6ce7cbe-7fc2-4a8c-8281-7b67f6f41451">
+      <ID>Babies</ID>
+      <Name>Babies</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bc60f7f6-e130-4e3a-bab6-35467fe0ae5b">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9b39708c-14ff-4d84-86ee-a6662e187ce8">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>babies</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f84c462b-bd9d-40d7-8273-9f25af330d59">
+      <ID>Booking Changes</ID>
+      <Name>Booking Changes</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7fcfe003-75ff-439a-85d0-14bbfe87e15e">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="06ddad99-34d4-4b38-81c3-6c70176a654c">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>booking_changes</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="df47589b-287d-4442-85f0-e30e71f1a159">
+      <ID>Children</ID>
+      <Name>Children</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f81f7b51-6ae0-48d0-8353-574acd7a5f5d">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ca57dc17-93d8-4769-adfa-e9207d1b6744">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>children</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="9ac4592c-c500-4c36-810f-752207210b83">
+      <ID>Days In Waiting List</ID>
+      <Name>Days In Waiting List</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="10e1bcea-521d-4879-8632-5694046fe5e7">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="68411ed6-a6e9-48bf-a4a4-9895d66822ae">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>days_in_waiting_list</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cc112fd4-5b3a-4d5a-91e6-b1db4ab88c8b">
+      <ID>Id Arrival Date</ID>
+      <Name>Id Arrival Date</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1f5a8cbe-c312-4629-9dec-f12f0585ac02">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="de09c24c-ef93-4525-bce3-7f84847c93b6">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>id_arrival_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c9d8fda1-b133-439e-b032-44a0dd89254e">
+      <ID>Id Customer</ID>
+      <Name>Id Customer</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15845015-f051-4531-ac99-a295d2ee8140">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="204416fb-204c-4dc1-8467-7c7fa59b6214">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>id_customer</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7db05e99-291d-465b-b33c-4f44d9620a68">
+      <ID>Id Deposit Type</ID>
+      <Name>Id Deposit Type</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="66dcd186-a7ec-41d7-bceb-42c4c4d9f28a">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0ec2c186-5164-4267-810d-8f049f5b4235">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>id_deposit_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="01614843-5b15-4d00-b25f-018af31e58f6">
+      <ID>Id Distribution Channel</ID>
+      <Name>Id Distribution Channel</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b758b7a3-49d3-44b4-ad3e-bf3f1fdd9344">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0bbb2406-a93a-4a7f-ae59-f848eec45cb5">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>id_distribution_channel</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="41a8d4cd-1dbf-48f5-ae44-f63a1790347c">
+      <ID>Id Fact</ID>
+      <Name>Id Fact</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2335bcdc-4bd0-49be-956f-bbd8dd042c9c">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fcf2ee0b-6eab-4348-957b-f7b831128fb4">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>id_fact</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="ffb71e06-56d3-4f45-a62e-a7ac8162b7d6">
+      <ID>Id Hotel Type</ID>
+      <Name>Id Hotel Type</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="329d6d53-4aff-4055-a1d0-1561c62467fe">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ce4ba696-f23f-47fc-bf13-440b7db94c4a">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>id_hotel_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="dba90e58-395d-4e7f-bb08-af7bc36e9091">
+      <ID>Id Market Segment</ID>
+      <Name>Id Market Segment</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7911bba6-984c-457e-94d1-ce268f023ec7">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2daedd8a-c4ed-4622-86ca-d5c44b909578">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>id_market_segment</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="5cb5f9c8-2a04-405e-9651-162ae983758e">
+      <ID>Id Reservation Status</ID>
+      <Name>Id Reservation Status</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="500220ad-3e5f-48ba-98b9-56be6cf06adf">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2735da79-8e87-4359-bf8b-e6471edeabef">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>id_reservation_status</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="45278301-7b37-47d5-a6f1-6c74a375c9a1">
+      <ID>Id Reservation Status Date</ID>
+      <Name>Id Reservation Status Date</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a142d728-3a54-4320-a0dc-9fc38c438b16">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8fea7ea0-4e64-4fed-9b5f-57e46008e8aa">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>id_reservation_status_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f70f3baa-9570-4f70-9aad-733359a14136">
+      <ID>Is Canceled</ID>
+      <Name>Is Canceled</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1512c99f-145a-4a0a-ad58-328b38032bc8">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d1d74e72-8aa1-491f-a3b7-82cd8907ef36">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>is_canceled</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="22a02d9f-eed6-41a0-9926-db7e1c76a3f6">
+      <ID>Is Repeated Guest</ID>
+      <Name>Is Repeated Guest</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="57c08098-e74f-41cf-a571-1ca92c23db4d">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="89f700a3-09e2-45eb-b74c-d47243ec5d26">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>is_repeated_guest</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c997a875-aacc-4258-9cbc-ee7a3a2982ed">
+      <ID>Lead Time</ID>
+      <Name>Lead Time</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aba1a6e9-e9d5-4746-8d64-775692eb9cc1">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f9d3ad96-79c6-4e8a-9483-32681b840c27">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>lead_time</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="314e69b6-c7e5-4b06-9912-7c7168fc53ca">
+      <ID>Meal</ID>
+      <Name>Meal</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7695ab73-4011-4e72-8659-1335f237a378">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="27d4705f-251c-4d4b-a669-7629e8fe1a58">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>meal</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="71170be0-2c31-4efb-be71-cc6aa3af80b9">
+      <ID>Previous Bookings Not Canceled</ID>
+      <Name>Previous Bookings Not Canceled</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9db792bc-59eb-4499-bfed-26dd5a697e97">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e057b93a-70d1-4f30-af72-5303370ff15c">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>previous_bookings_not_canceled</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f1ebfbef-1f02-4052-9fe5-d2b3dee8e460">
+      <ID>Previous Cancellations</ID>
+      <Name>Previous Cancellations</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="753ba0d5-6174-4c13-a414-e8d83dd39663">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="83feb207-0ae1-4159-a722-11a271bacba4">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>previous_cancellations</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c0d32061-f809-43e3-a7c8-9708c9cf1874">
+      <ID>Required Car Parking Spaces</ID>
+      <Name>Required Car Parking Spaces</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f3fdb2a0-1058-47fc-ba0f-fdbdf91375d9">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="be88b27b-edf0-4c6f-ad7f-420af3907dde">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>required_car_parking_spaces</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="19873592-eb08-40b6-986a-b2ad387517d0">
+      <ID>Reserved Room Type</ID>
+      <Name>Reserved Room Type</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d6e24b3b-1a69-408f-8f0a-35452d9d5a52">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="46b92d4f-e2ef-4778-9f7c-b9e8aa504a55">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>reserved_room_type</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="2a166b62-39fc-4e66-b518-70332af38fd2">
+      <ID>Stays In Week Nights</ID>
+      <Name>Stays In Week Nights</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2e8487fb-e8d2-4bb6-ae9b-0747e5908b84">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="542637dc-dd27-40f6-817f-42a8840a60bd">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>stays_in_week_nights</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="d066a8a2-7811-4db0-8112-a98b07b9f511">
+      <ID>Stays In Weekend Nights</ID>
+      <Name>Stays In Weekend Nights</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f3a4f891-8941-4919-b865-43dc5b554958">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3801dc7f-9032-40a7-8cf5-643f0e97e191">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>stays_in_weekend_nights</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="cb979935-c268-4041-8c2a-bd9d9ff8905a">
+      <ID>Total Of Special Requests</ID>
+      <Name>Total Of Special Requests</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="249f01c9-f044-4c61-9d8e-58dee3a82bcb">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e09ac30e-bd01-4217-9a77-bee5f2d67491">
+            <TableID>dbo_FactHotelBooking</TableID>
+            <ColumnID>total_of_special_requests</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="854d9b2f-6da1-403f-acc3-ba991c1bc193">
+      <ID>DT</ID>
+      <Name>DT</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="66728fd7-fc26-4d30-8b29-a5217fd3e4e5">
+          <ID>Adr</ID>
+          <Name>Adr</Name>
+          <SourceColumnID>Adr</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="14ddf032-d9c6-412c-9fc1-94622c6255bc">
+          <ID>Adults</ID>
+          <Name>Adults</Name>
+          <SourceColumnID>Adults</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ff9e8617-57f8-4dfe-94bd-83684e0e1082">
+          <ID>Assigned Room Type</ID>
+          <Name>Assigned Room Type</Name>
+          <SourceColumnID>Assigned Room Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c8e6493e-969b-406b-add9-3f4da75fa7f6">
+          <ID>Babies</ID>
+          <Name>Babies</Name>
+          <SourceColumnID>Babies</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e5f6a224-ddb2-4fdf-81f4-500034ef1350">
+          <ID>Booking Changes</ID>
+          <Name>Booking Changes</Name>
+          <SourceColumnID>Booking Changes</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="5e0352e4-1f22-47a5-a87e-7a179424ab56">
+          <ID>Children</ID>
+          <Name>Children</Name>
+          <SourceColumnID>Children</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8d068193-3367-41f1-82fd-d23d5a35f26d">
+          <ID>Days In Waiting List</ID>
+          <Name>Days In Waiting List</Name>
+          <SourceColumnID>Days In Waiting List</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="1a4b3cc2-699f-4e65-b6c0-0598ddf55be7">
+          <ID>Id Customer</ID>
+          <Name>Id Customer</Name>
+          <SourceColumnID>Id Customer</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a4d721e0-132e-4eed-a375-8183205b0f27">
+          <ID>Id Deposit Type</ID>
+          <Name>Id Deposit Type</Name>
+          <SourceColumnID>Id Deposit Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8d8953ab-1190-49c5-bec4-a14897c18ae6">
+          <ID>Id Distribution Channel</ID>
+          <Name>Id Distribution Channel</Name>
+          <SourceColumnID>Id Distribution Channel</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1b387056-f33c-42a0-aa9f-11931144be9a">
+          <ID>Id Fact</ID>
+          <Name>Id Fact</Name>
+          <SourceColumnID>Id Fact</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="3f05b71b-2020-408f-a2f4-9b431f264626">
+          <ID>Id Hotel Type</ID>
+          <Name>Id Hotel Type</Name>
+          <SourceColumnID>Id Hotel Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="378f285f-e3b7-4da0-be54-7c7ebd89ced6">
+          <ID>Id Market Segment</ID>
+          <Name>Id Market Segment</Name>
+          <SourceColumnID>Id Market Segment</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="3196c14f-e33d-4aea-aba3-d786f7af5a84">
+          <ID>Is Canceled</ID>
+          <Name>Is Canceled</Name>
+          <SourceColumnID>Is Canceled</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="8c0e8a42-e651-4df6-aa94-f0f46f012dc4">
+          <ID>Is Repeated Guest</ID>
+          <Name>Is Repeated Guest</Name>
+          <SourceColumnID>Is Repeated Guest</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5f7f4c83-0b3d-4203-bf9d-77fe2bf7327f">
+          <ID>Lead Time</ID>
+          <Name>Lead Time</Name>
+          <SourceColumnID>Lead Time</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="109a0412-fe20-495b-afc9-18225822b31e">
+          <ID>Meal</ID>
+          <Name>Meal</Name>
+          <SourceColumnID>Meal</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="55e1e9da-3bcd-4434-a69d-2093226bf0c0">
+          <ID>Previous Bookings Not Canceled</ID>
+          <Name>Previous Bookings Not Canceled</Name>
+          <SourceColumnID>Previous Bookings Not Canceled</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="3f47e378-e259-46e3-9ecf-4682e7d9622b">
+          <ID>Previous Cancellations</ID>
+          <Name>Previous Cancellations</Name>
+          <SourceColumnID>Previous Cancellations</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="41b6ab8e-381e-486d-b45a-47d0c1c1c347">
+          <ID>Required Car Parking Spaces</ID>
+          <Name>Required Car Parking Spaces</Name>
+          <SourceColumnID>Required Car Parking Spaces</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a0821a05-da9a-4322-a212-764191c7748a">
+          <ID>Reserved Room Type</ID>
+          <Name>Reserved Room Type</Name>
+          <SourceColumnID>Reserved Room Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d8c11c08-d8c3-4373-bc25-649b71a9b8b6">
+          <ID>Stays In Week Nights</ID>
+          <Name>Stays In Week Nights</Name>
+          <SourceColumnID>Stays In Week Nights</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="a96f55f6-b8c6-430c-a8e5-61362fffac1c">
+          <ID>Stays In Weekend Nights</ID>
+          <Name>Stays In Weekend Nights</Name>
+          <SourceColumnID>Stays In Weekend Nights</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="510dfb31-37b8-47b6-aa84-202ca60e3c26">
+          <ID>Total Of Special Requests</ID>
+          <Name>Total Of Special Requests</Name>
+          <SourceColumnID>Total Of Special Requests</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="d80d4a59-b243-4b5a-8ee8-81e221a66023">
+      <ID>C</ID>
+      <Name>C</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Clustering</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="30397be4-3ca0-42c5-8e76-e4c2136b6cd6">
+          <ID>Adr</ID>
+          <Name>Adr</Name>
+          <SourceColumnID>Adr</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="17a5542f-d54e-45fa-b5fd-eaca04f5f95f">
+          <ID>Adults</ID>
+          <Name>Adults</Name>
+          <SourceColumnID>Adults</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="644d9ecc-991c-4ed1-9429-16b3597b89fa">
+          <ID>Assigned Room Type</ID>
+          <Name>Assigned Room Type</Name>
+          <SourceColumnID>Assigned Room Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="67b1957c-200d-44ca-a4a1-cfa8676f1d70">
+          <ID>Babies</ID>
+          <Name>Babies</Name>
+          <SourceColumnID>Babies</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cf1bae27-4a28-4940-921e-98dedabc57b8">
+          <ID>Booking Changes</ID>
+          <Name>Booking Changes</Name>
+          <SourceColumnID>Booking Changes</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="23065bd7-b7ac-464b-804a-fb6bbbdb34d6">
+          <ID>Children</ID>
+          <Name>Children</Name>
+          <SourceColumnID>Children</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="66d27dbf-ca2c-4fb2-ba4a-bc6f0262b285">
+          <ID>Days In Waiting List</ID>
+          <Name>Days In Waiting List</Name>
+          <SourceColumnID>Days In Waiting List</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="de70e6b4-f902-40e6-aa4a-82f6555b07a8">
+          <ID>Id Customer</ID>
+          <Name>Id Customer</Name>
+          <SourceColumnID>Id Customer</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="328f925d-63ee-48f8-a711-202bb86a6e35">
+          <ID>Id Deposit Type</ID>
+          <Name>Id Deposit Type</Name>
+          <SourceColumnID>Id Deposit Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d986a62e-0cdc-4b71-990f-c6b31f4a90c5">
+          <ID>Id Distribution Channel</ID>
+          <Name>Id Distribution Channel</Name>
+          <SourceColumnID>Id Distribution Channel</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="0874a48c-35d3-4a9b-9cf7-8fa990dd6d43">
+          <ID>Id Fact</ID>
+          <Name>Id Fact</Name>
+          <SourceColumnID>Id Fact</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="67fdb12a-166f-4b6f-97e0-320c49e6094b">
+          <ID>Id Hotel Type</ID>
+          <Name>Id Hotel Type</Name>
+          <SourceColumnID>Id Hotel Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5610ecab-560e-4e6b-a1f9-00f6cc91fe36">
+          <ID>Id Market Segment</ID>
+          <Name>Id Market Segment</Name>
+          <SourceColumnID>Id Market Segment</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6d950469-a79e-484a-aaac-c4f72025c710">
+          <ID>Is Canceled</ID>
+          <Name>Is Canceled</Name>
+          <SourceColumnID>Is Canceled</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="910ce221-869d-4787-8aa5-f9815ae44230">
+          <ID>Is Repeated Guest</ID>
+          <Name>Is Repeated Guest</Name>
+          <SourceColumnID>Is Repeated Guest</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e5cbb24b-46dc-4592-8a2a-a08b2a37d483">
+          <ID>Lead Time</ID>
+          <Name>Lead Time</Name>
+          <SourceColumnID>Lead Time</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="2e67d684-42f2-4399-ae24-cda6c7901f96">
+          <ID>Meal</ID>
+          <Name>Meal</Name>
+          <SourceColumnID>Meal</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c296a94b-2cc0-4e2d-8cca-d9a1968285ba">
+          <ID>Previous Bookings Not Canceled</ID>
+          <Name>Previous Bookings Not Canceled</Name>
+          <SourceColumnID>Previous Bookings Not Canceled</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="81399508-6793-4e37-866e-a65a894d1f2a">
+          <ID>Previous Cancellations</ID>
+          <Name>Previous Cancellations</Name>
+          <SourceColumnID>Previous Cancellations</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="08e19875-d111-404e-81c6-3aaffc213e25">
+          <ID>Required Car Parking Spaces</ID>
+          <Name>Required Car Parking Spaces</Name>
+          <SourceColumnID>Required Car Parking Spaces</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="00b66572-5177-4509-9d2d-a5a80c34eb71">
+          <ID>Reserved Room Type</ID>
+          <Name>Reserved Room Type</Name>
+          <SourceColumnID>Reserved Room Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b6f7eb5c-288d-44e1-8f00-8a25521aeccf">
+          <ID>Stays In Week Nights</ID>
+          <Name>Stays In Week Nights</Name>
+          <SourceColumnID>Stays In Week Nights</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="df13b2ce-1c7b-4fc3-94ae-ecdf9400b772">
+          <ID>Stays In Weekend Nights</ID>
+          <Name>Stays In Weekend Nights</Name>
+          <SourceColumnID>Stays In Weekend Nights</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b45f3b38-5b3d-4606-af00-5bb7806d5215">
+          <ID>Total Of Special Requests</ID>
+          <Name>Total Of Special Requests</Name>
+          <SourceColumnID>Total Of Special Requests</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="ae874e94-e16b-48aa-9a37-5eaf53096f41">
+      <ID>LR</ID>
+      <Name>LR</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Logistic_Regression</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="bb47ae05-c9ad-4998-a2ea-e8f4ac742c07">
+          <ID>Adr</ID>
+          <Name>Adr</Name>
+          <SourceColumnID>Adr</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="05202fc4-ee68-4368-ab2f-8970237975fa">
+          <ID>Adults</ID>
+          <Name>Adults</Name>
+          <SourceColumnID>Adults</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e6cf4e2e-0d0f-4b17-903d-ccfbd16972f6">
+          <ID>Assigned Room Type</ID>
+          <Name>Assigned Room Type</Name>
+          <SourceColumnID>Assigned Room Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="afb9750b-3fb0-42a3-8e4f-232721bffc2f">
+          <ID>Babies</ID>
+          <Name>Babies</Name>
+          <SourceColumnID>Babies</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a4356798-0dae-49b3-b96b-99d639e6e955">
+          <ID>Booking Changes</ID>
+          <Name>Booking Changes</Name>
+          <SourceColumnID>Booking Changes</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7e83f33a-6c26-4c6e-b2f4-eff04cedc481">
+          <ID>Children</ID>
+          <Name>Children</Name>
+          <SourceColumnID>Children</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="abdb7a1a-ffdd-4a8d-b0a4-ed923c97af78">
+          <ID>Days In Waiting List</ID>
+          <Name>Days In Waiting List</Name>
+          <SourceColumnID>Days In Waiting List</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a9c5fc13-8810-4ac0-b805-1bfa8504ccac">
+          <ID>Id Customer</ID>
+          <Name>Id Customer</Name>
+          <SourceColumnID>Id Customer</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8e168b0b-061c-4434-97c3-45186b56d5fa">
+          <ID>Id Deposit Type</ID>
+          <Name>Id Deposit Type</Name>
+          <SourceColumnID>Id Deposit Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9f295751-c200-461b-a98f-17c582d9f5dd">
+          <ID>Id Distribution Channel</ID>
+          <Name>Id Distribution Channel</Name>
+          <SourceColumnID>Id Distribution Channel</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="6dfd2ffc-c2ad-4464-bf0a-c1ee0feac800">
+          <ID>Id Fact</ID>
+          <Name>Id Fact</Name>
+          <SourceColumnID>Id Fact</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="7da0683a-e0fc-4306-9dd0-a3724795da87">
+          <ID>Id Hotel Type</ID>
+          <Name>Id Hotel Type</Name>
+          <SourceColumnID>Id Hotel Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b2b754e8-8e03-47ee-b10a-29683bd502d9">
+          <ID>Id Market Segment</ID>
+          <Name>Id Market Segment</Name>
+          <SourceColumnID>Id Market Segment</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b2fc5eb1-d389-46fb-8a7a-8aa438462bfa">
+          <ID>Is Canceled</ID>
+          <Name>Is Canceled</Name>
+          <SourceColumnID>Is Canceled</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="0828d08f-17c2-4575-a0ed-323832fec97d">
+          <ID>Is Repeated Guest</ID>
+          <Name>Is Repeated Guest</Name>
+          <SourceColumnID>Is Repeated Guest</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7ff35b5c-74a7-4138-a601-5518185e655f">
+          <ID>Lead Time</ID>
+          <Name>Lead Time</Name>
+          <SourceColumnID>Lead Time</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f6079f3f-a5f7-428d-994e-ee93acbeb73c">
+          <ID>Meal</ID>
+          <Name>Meal</Name>
+          <SourceColumnID>Meal</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c9800cdb-a089-4f91-a270-8ab05f918dea">
+          <ID>Previous Bookings Not Canceled</ID>
+          <Name>Previous Bookings Not Canceled</Name>
+          <SourceColumnID>Previous Bookings Not Canceled</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="fe594a59-4536-49e2-9238-4c518c555c49">
+          <ID>Previous Cancellations</ID>
+          <Name>Previous Cancellations</Name>
+          <SourceColumnID>Previous Cancellations</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d48761da-b164-4b3f-9252-0f5931e5d075">
+          <ID>Required Car Parking Spaces</ID>
+          <Name>Required Car Parking Spaces</Name>
+          <SourceColumnID>Required Car Parking Spaces</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="5993f40a-e6a5-4447-9a84-67f62858a42f">
+          <ID>Reserved Room Type</ID>
+          <Name>Reserved Room Type</Name>
+          <SourceColumnID>Reserved Room Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="928423b1-173b-4e6d-9e07-061e3e35a76a">
+          <ID>Stays In Week Nights</ID>
+          <Name>Stays In Week Nights</Name>
+          <SourceColumnID>Stays In Week Nights</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="88359ced-eaae-44e6-b63a-74a50f5616ea">
+          <ID>Stays In Weekend Nights</ID>
+          <Name>Stays In Weekend Nights</Name>
+          <SourceColumnID>Stays In Weekend Nights</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1152b8af-3f36-4ef2-8453-755dbd15125c">
+          <ID>Total Of Special Requests</ID>
+          <Name>Total Of Special Requests</Name>
+          <SourceColumnID>Total Of Special Requests</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="94f7931c-3fb0-424d-97c0-ec8f994b6db9">
+      <ID>NB</ID>
+      <Name>NB</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="884e9aa5-7580-4df1-b8af-67b5886e86ec">
+          <ID>Adults</ID>
+          <Name>Adults</Name>
+          <SourceColumnID>Adults</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e51be7d7-a026-4f09-a04d-1191e8c58017">
+          <ID>Assigned Room Type</ID>
+          <Name>Assigned Room Type</Name>
+          <SourceColumnID>Assigned Room Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8e5292fa-b7db-4107-aef1-ee0a5281ee76">
+          <ID>Babies</ID>
+          <Name>Babies</Name>
+          <SourceColumnID>Babies</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="fbaa0582-41a4-4a9c-836b-bf264e00813a">
+          <ID>Children</ID>
+          <Name>Children</Name>
+          <SourceColumnID>Children</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e4b7b10a-6a62-40f4-a387-06ee2376b7c7">
+          <ID>Id Customer</ID>
+          <Name>Id Customer</Name>
+          <SourceColumnID>Id Customer</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c11f9ecd-2369-4e2b-a1bd-3bb4ff20b246">
+          <ID>Id Deposit Type</ID>
+          <Name>Id Deposit Type</Name>
+          <SourceColumnID>Id Deposit Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8a0661c1-efa8-463a-af9a-ea90a821f334">
+          <ID>Id Distribution Channel</ID>
+          <Name>Id Distribution Channel</Name>
+          <SourceColumnID>Id Distribution Channel</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="f8feecec-5075-4465-896b-c58fd1cd539b">
+          <ID>Id Fact</ID>
+          <Name>Id Fact</Name>
+          <SourceColumnID>Id Fact</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="e54cfaea-aa62-4fb4-956a-804bf5e54742">
+          <ID>Id Hotel Type</ID>
+          <Name>Id Hotel Type</Name>
+          <SourceColumnID>Id Hotel Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7feffee7-c98e-40d7-a0a2-19b32cd1008b">
+          <ID>Is Canceled</ID>
+          <Name>Is Canceled</Name>
+          <SourceColumnID>Is Canceled</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="4bca7f9f-3a33-4703-9234-f7d67779200d">
+          <ID>Is Repeated Guest</ID>
+          <Name>Is Repeated Guest</Name>
+          <SourceColumnID>Is Repeated Guest</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ab0731a5-80ae-4860-8aae-1507c496be7b">
+          <ID>Meal</ID>
+          <Name>Meal</Name>
+          <SourceColumnID>Meal</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="47a50e1c-533c-4a48-8217-182a828f586b">
+          <ID>Previous Cancellations</ID>
+          <Name>Previous Cancellations</Name>
+          <SourceColumnID>Previous Cancellations</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="73563876-ec34-4cdc-9b05-f6abd8c60b6a">
+          <ID>Required Car Parking Spaces</ID>
+          <Name>Required Car Parking Spaces</Name>
+          <SourceColumnID>Required Car Parking Spaces</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="7c21da54-77de-420e-8a4d-439b997866c5">
+          <ID>Reserved Room Type</ID>
+          <Name>Reserved Room Type</Name>
+          <SourceColumnID>Reserved Room Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ec39aca7-5d80-45d4-ad65-76eceffcbfd9">
+          <ID>Total Of Special Requests</ID>
+          <Name>Total Of Special Requests</Name>
+          <SourceColumnID>Total Of Special Requests</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="d27d5a56-344b-413f-b78a-dbbb29abae47">
+      <ID>NN</ID>
+      <Name>NN</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Neural_Network</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="ab6a2059-f62f-4d27-8c92-a5c88dc9af9b">
+          <ID>Adults</ID>
+          <Name>Adults</Name>
+          <SourceColumnID>Adults</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="bc0423f6-66b7-4455-978a-a3c29637e853">
+          <ID>Assigned Room Type</ID>
+          <Name>Assigned Room Type</Name>
+          <SourceColumnID>Assigned Room Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="48704654-b833-48f3-9f8e-fcfd70b2c74f">
+          <ID>Babies</ID>
+          <Name>Babies</Name>
+          <SourceColumnID>Babies</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c54ce5d1-1016-4501-8150-cad77c8819d0">
+          <ID>Children</ID>
+          <Name>Children</Name>
+          <SourceColumnID>Children</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="821499e5-27ff-4279-8184-9f0300fa03cb">
+          <ID>Id Customer</ID>
+          <Name>Id Customer</Name>
+          <SourceColumnID>Id Customer</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="979e583a-f04d-40cc-8194-fd429bd0d221">
+          <ID>Id Deposit Type</ID>
+          <Name>Id Deposit Type</Name>
+          <SourceColumnID>Id Deposit Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="081ec5ea-9fb1-43db-a444-1ce49ca58169">
+          <ID>Id Distribution Channel</ID>
+          <Name>Id Distribution Channel</Name>
+          <SourceColumnID>Id Distribution Channel</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="aa5aa3ac-a979-42b7-9793-2e6edbe83c0e">
+          <ID>Id Fact</ID>
+          <Name>Id Fact</Name>
+          <SourceColumnID>Id Fact</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="c6923ff4-7eaf-4e77-be35-67f9bc54638e">
+          <ID>Id Hotel Type</ID>
+          <Name>Id Hotel Type</Name>
+          <SourceColumnID>Id Hotel Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="a487a2f6-180c-4c58-9ce3-08747a0f5209">
+          <ID>Is Canceled</ID>
+          <Name>Is Canceled</Name>
+          <SourceColumnID>Is Canceled</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="05265914-75d1-4b24-bbb7-ccb1cb22a428">
+          <ID>Is Repeated Guest</ID>
+          <Name>Is Repeated Guest</Name>
+          <SourceColumnID>Is Repeated Guest</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1fc92bce-2906-470b-be07-2f743590bb1a">
+          <ID>Meal</ID>
+          <Name>Meal</Name>
+          <SourceColumnID>Meal</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3d69ddfe-f3ea-4837-85f2-4cccf1d18d22">
+          <ID>Previous Cancellations</ID>
+          <Name>Previous Cancellations</Name>
+          <SourceColumnID>Previous Cancellations</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d7b43630-7563-48e8-b091-f0b72f57e011">
+          <ID>Required Car Parking Spaces</ID>
+          <Name>Required Car Parking Spaces</Name>
+          <SourceColumnID>Required Car Parking Spaces</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="acc69355-66ea-46dd-8df3-0f987c190692">
+          <ID>Reserved Room Type</ID>
+          <Name>Reserved Room Type</Name>
+          <SourceColumnID>Reserved Room Type</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="b63c144f-e5c7-444e-b8e7-ab1108687372">
+          <ID>Total Of Special Requests</ID>
+          <Name>Total Of Special Requests</Name>
+          <SourceColumnID>Total Of Special Requests</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+  <ddl100_100:HoldoutMaxCases>10000</ddl100_100:HoldoutMaxCases>
+</MiningStructure>

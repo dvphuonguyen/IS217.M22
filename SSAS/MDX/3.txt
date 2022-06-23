@@ -1,4 +1,0 @@
-Select {[Measures].[Adults], [Measures].[Babies], [Measures].[Children]} on Columns , 
-NON EMPTY{[Arrival Time].[Arrival Date Year].Children 
-	* [Arrival Time].[Arrival Date Month Number].Children} on Rows
-From [DB DATAWAREHOUSE];

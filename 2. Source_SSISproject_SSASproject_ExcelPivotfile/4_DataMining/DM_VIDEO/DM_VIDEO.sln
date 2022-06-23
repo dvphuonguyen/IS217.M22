@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32407.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "DM_VIDEO", "DM_VIDEO\DM_VIDEO.dwproj", "{A14AD9A7-0B68-4A5D-A25C-2A83EB9DA096}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A14AD9A7-0B68-4A5D-A25C-2A83EB9DA096}.Development|Default.ActiveCfg = Development
+		{A14AD9A7-0B68-4A5D-A25C-2A83EB9DA096}.Development|Default.Build.0 = Development
+		{A14AD9A7-0B68-4A5D-A25C-2A83EB9DA096}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C74D10D4-94DC-4C2F-AA6A-09B351E79348}
+	EndGlobalSection
+EndGlobal

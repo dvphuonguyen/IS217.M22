@@ -1,4 +1,0 @@
-CREATE TABLE [MarketSegment] (
-    [id_market_segment] int primary key,
-    [market_segment] varchar(255)
-)

@@ -1,0 +1,206 @@
+﻿//1. Thống kê tổng số lượng khách hàng đặt phòng, tổng doanh thu của từng loại khách sạn theo từng năm.
+With member [Measures].[Turnover] 
+as [Measures].[Adr] ,FORMAT_STRING = 'Currency'
+
+Select {[Measures].[Turnover], [Measures].[Fact Hotel Booking Count]} on Rows , 
+NON EMPTY{ [Hotel Type].[Hotel Type].Children * [Arrival Time].[Arrival Date Year].Children} on Columns
+From [DB DATAWAREHOUSE];
+//2. Thống kê có bao nhiêu khách hàng là người lớn, bao nhiêu khách hàng là trẻ em và bao nhiêu khách hàng là em bé trong từng tháng của từng năm.
+Select {[Measures].[Adults], [Measures].[Babies], [Measures].[Children]} on Columns , 
+NON EMPTY{[Arrival Time].[Arrival Date Year].Children 
+	* [Arrival Time].[Arrival Date Month Number].Children} on Rows
+From [DB DATAWAREHOUSE];
+
+//3. Liệt kê khách hàng của từng loại khách hàng có doanh số cao nhất trong năm 2017
+SELECT	{	[Measures].[Adr]} ON COLUMNS,
+		NON EMPTY {	GENERATE (
+								[Customer].[Customer Type].[Customer Type].MEMBERS,
+								TOPCOUNT(	
+											CROSSJOIN([Customer].[Customer Type].CURRENTMEMBER, [Customer].[Name].CHILDREN),
+											1,
+											[Measures].[Adr]
+										)
+								)
+		} ON ROWS
+FROM [DB DATAWAREHOUSE]
+WHERE [Arrival Time].[Arrival Date Year].&[2.017e3];
+
+//4. Cho biết top 10 quốc gia có lượng khách du lịch cao nhất trong năm 2016, sắp xếp các giá trị theo thứ tự tăng dần. 
+SELECT	{	[Measures].[Fact Hotel Booking Count]} ON COLUMNS,
+		NON EMPTY {		TAIL(
+								ORDER(	
+											[Customer].[Country].CHILDREN,
+											[Measures].[Fact Hotel Booking Count],
+											ASC
+										),
+								10
+							)
+		} ON ROWS
+FROM [DB DATAWAREHOUSE]
+WHERE [Arrival Time].[Arrival Date Year].&[2.016e3];
+
+//5. Liệt kê số lượng đơn đặt phòng ở ‘China’ và ‘Việt Nam’ theo từng năm và loại khách hàng là ‘Transient’
+SELECT NON EMPTY {[Reservation Date].[Reservation Date Year].CHILDREN} ON ROWS, 
+		[Measures].[Fact Hotel Booking Count] ON COLUMNS
+FROM [DB DATAWAREHOUSE]
+WHERE ({[Customer].[Country].&[VNM],[Customer].[Country].&[CHN]},[Customer].[Customer Type].&[Transient]);
+
+//6. Liệt kê số lượng đơn đặt phòng ở ‘China’ và ‘Việt Nam’ theo từng năm và loại khách hàng là ‘Transient’
+SELECT [Measures].[Fact Hotel Booking Count] ON COLUMNS, NON
+EMPTY{[Customer].[Country].CHILDREN}
+HAVING [Measures].[Fact Hotel Booking Count]>6095 ON ROWS
+FROM [DB DATAWAREHOUSE];
+
+//7. Liệt kê 5 khách hàng có tên bắt đầu bằng chữ D ở Bồ Đào Nha (PRT), nếu 
+//khách hàng có tổng chi tiêu > 500 và là khách hàng quay lại thì xuất "Khách hàng 
+//thân thiết". Nếu tổng chi tiêu > 500 và là khách hàng lần đầu tiên tới thì xuất "Khách 
+//hàng tiềm năng". Ngược lại xuất "Khách hàng vãng lai."
+WITH MEMBER [Measures].CaseResult AS   
+CASE 
+   WHEN ([Measures].[Adr] > 500 AND [Measures].[Is Repeated Guest]= 1) THEN "Khách hàng thân thiết"  
+   WHEN ([Measures].[Adr] > 500 AND [Measures].[Is Repeated Guest]= 0) THEN "Khách hàng tiềm năng" 
+   ELSE "Khách hàng vãng lai"
+END  
+
+
+SELECT	{	[Measures].[Adr], [Measures].[Is Repeated Guest], [Measures].CaseResult} ON COLUMNS,
+		NON EMPTY {	TOPCOUNT(	([Customer].[Id Customer].CHILDREN * (	Filter(	
+																	[Customer].[Name].CHILDREN, 
+																	Left([Customer].[Name].CurrentMember.Name, 1) = "D"
+																	)
+														)
+					), 
+					5,
+					[Measures].[Adr]
+				)
+		} ON ROWS
+FROM [DB DATAWAREHOUSE]
+WHERE [Customer].[Country].&[PRT];
+
+//8. Liệt kê các quốc gia thu được lợi nhuận năm 2017 nhiều hơn năm 2016 và sắp xếp theo lợi nhuận giảm dần
+With Member [Measures].[Adr 2017] As
+		IIF (([Measures].[Adr], [Arrival Time].[Arrival Date Year].&[2017]) = Null, 0, ([Measures].[Adr], [Arrival Time].[Arrival Date Year].&[2017]))
+	 Member [Measures].[Adr 2016] As
+		IIF (([Measures].[Adr], [Arrival Time].[Arrival Date Year].&[2016]) = Null, 0, ([Measures].[Adr], [Arrival Time].[Arrival Date Year].&[2016]))
+	 Member [Measures].[Profit Percent] As 
+		CASE 
+		   WHEN ([Measures].[Adr 2017] <> 0 and [Measures].[Adr 2016] <> 0 )THEN [Measures].[Adr 2017] / [Measures].[Adr 2016]  
+		   ELSE 0
+		END  ,Format_String = 'Percent'
+Select	{	
+			[Measures].[Adr 2017], 
+			[Measures].[Adr 2016],
+			[Measures].[Profit Percent]
+		} on Columns,
+		NON EMPTY{ 
+			FILTER(
+					Order(
+						([Customer].[Country].CHILDREN),
+						[Measures].[Profit Percent],
+						DESC
+					),
+					[Measures].[Profit Percent] > 1
+					)
+		} on Rows
+From [DB DATAWAREHOUSE];
+
+//9. Liệt kê các phân khúc thị trường mà tổng doanh thu của của kênh phân phối 
+//"Corporate" đó cộng lại tốí thiếu 500 (lấy theo thứ tự doanh thu tăng dần) hoặc những 
+//phân khúc thị trường có số lượng lượt đặt phòng của kênh phân phối "Direct" tối thiểu 
+//500
+SELECT {
+			([Measures].[Adr],[Distribution Channel].[Distribution Channel].&[Corporate]),
+			([Measures].[Fact Hotel Booking Count],[Distribution Channel].[Distribution Channel].&[Direct])
+		} on columns,
+		NON EMPTY (	
+					union (
+							{BOTTOMSUM([Market Segment].[Market Segment].[Market Segment].members,500,([Measures].[Adr],[Distribution Channel].[Distribution Channel].&[Corporate]))},
+							{TOPSUM([Market Segment].[Market Segment].[Market Segment].members,500,([Measures].[Fact Hotel Booking Count],[Distribution Channel].[Distribution Channel].&[Direct]))}
+						) 
+					)on rows
+from [DB DATAWAREHOUSE];
+
+//10. Liệt kê tổng số đêm thuê của các quốc gia trong năm 2015 trừ (ngày nhận 
+//phòng vào thứ 7 và không đặt tiền cọc trước của trong năm 2015).
+WITH MEMBER [Measures].[Total Nights] as 
+	([Measures].[Stays In Week Nights] + [Measures].[Stays In Weekend Nights])
+
+SELECT [Measures].[Total Nights] ON COLUMNS,
+			NON EMPTY(		
+						EXCEPT(	[Customer].[Country].[Country].members,
+										(EXISTS (	
+													([Customer].[Country].[Country].members), 
+													([Reservation Date].[Reservation Date Year].&[2015],[Deposit Type].[Deposit Type].&[No Deposit], [Arrival Time].[Arrival Date Day Name Abbrev].&[Sat]),
+													"Fact Hotel Booking"
+												)
+										)
+									  )
+				)on rows
+from [DB DATAWAREHOUSE]
+where [Arrival Time].[Arrival Date Year].&[2015] ;
+
+//11. Với mỗi tháng đưa ra 3 email của khách hàng có chi tiêu cao nhất.
+Select	{[Measures].[Adr]} on Columns,
+		NON EMPTY{Generate(
+			[Arrival Time].[Arrival Date Month Name].Children,
+			TopCount( 
+				{[Arrival Time].[Arrival Date Month Name].CurrentMember * [Customer].[Email].Children}
+				,3
+				,[Measures].[Adr]
+			)
+		)} on Rows
+From [DB DATAWAREHOUSE];
+
+//12. Liệt kê các quý theo từng năm của quốc gia Bồ Đào Nha, thuộc top 50% quý 
+//có tổng yêu cầu đặc biệt trong tổng số yêu cầu đặc biệt thu được.
+SELECT {[Measures].[Adr], [Measures].[Total Of Special Requests]} ON COLUMNS,
+NON EMPTY(
+	CROSSJOIN([Customer].[Country].&[PRT],
+		DRILLDOWNLEVEL([Arrival Time].[Arrival Date Year].[Arrival Date Year]*
+		TOPPERCENT([Arrival Time].[Arrival Date Quarter].[Arrival Date Quarter], 50, [Measures].[Total Of Special Requests]),,0)
+))ON ROWS
+FROM [DB DATAWAREHOUSE];
+
+//13.Liệt kê những phân khúc thị trường và kênh phân phối có yêu cầu bãi đổ cho 
+//từ 5 đến 10 xe
+
+Select	{[Measures].[Required Car Parking Spaces]} on Columns,
+		
+			{Intersect( 
+				{Filter([Market Segment].[Market Segment].Children * [Distribution Channel].[Distribution Channel].Children, [Measures].[Required Car Parking Spaces] >= 5)}
+				,{Filter([Market Segment].[Market Segment].Children * [Distribution Channel].[Distribution Channel].Children,[Measures].[Required Car Parking Spaces] <= 10)}
+			)}
+			
+		on Rows
+From [DB DATAWAREHOUSE];
+
+//14. Thống kê tổng thời gian chờ của từng hình thức thanh toán đặt cọc mà khách 
+//hàng đặt phòng theo từng tháng, quý, năm
+ Select	NON EMPTY{[Reservation Status].[Reservation Status].Children * [Measures].[Lead Time]} on Columns,
+		NON EMPTY{	
+			DrillDownLevel(
+				DrillDownLevel(
+					DrillDownLevel(
+					[Arrival Time].[PhanCapNgayNhanPhong(YQMDD)])
+				)
+			)
+		} on Rows
+ From [DB DATAWAREHOUSE];
+
+//15. Tính trung bình ngày chờ trên mỗi loại khách hàng của loại hình phân khúc 
+//thị trường của mỗi quốc gia và được thực hiện với năm thay đổi trạng thái bằng năm 
+//nhận phòng trừ loại hình phân khúc là Complementary
+with member [Measures].[AVG] as
+	sum([Measures].[Days In Waiting List]) / DISTINCTCOUNT([Customer].[Customer Type].[Customer Type].members)
+select	{[Measures].[Days In Waiting List],  [Measures].[AVG]} on columns,
+		non empty (generate(	[Customer].[Country].[Country],
+							filter (	[Customer].[Country].currentmember * 
+										[Market Segment].[Market Segment].[Market Segment] * 
+										[Arrival Time].[Arrival Date Year].[Arrival Date Year],
+										[Arrival Time].[Arrival Date Year].currentmember = [Reservation Date].[Reservation Date Year] and
+										[Market Segment].[Market Segment].currentmember <> [Market Segment].[Market Segment].[Complementary] and
+										[Measures].[Days In Waiting List] > [Measures].[AVG] and [Measures].[AVG] > 0
+									) 
+							)
+					)on rows
+from [DB DATAWAREHOUSE];

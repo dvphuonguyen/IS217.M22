@@ -1,0 +1,110 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>SSAS_VIDEO</Database>
+    <Server>DESKTOP-3RSABH2\PHUONGUYEN</Server>
+    <ConnectionString>Data Source=DESKTOP-3RSABH2\PHUONGUYEN;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>piPjuLUr5ci5mWWxkYClc60Wp5A=5/1/2022 1:33:31 PM5/1/2022 1:33:31 PM</TimeStamp>
+        <ID>
+          <String>DB DATAWAREHOUSE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>2qycemE0wnqD834hpXn3xawJY2Y=5/1/2022 1:38:36 PM5/1/2022 1:38:36 PM</TimeStamp>
+        <ID>
+          <String>DB DATAWAREHOUSE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>pTZ+4pToSlW2HEdX0InYdaTXtz4=5/1/2022 2:19:10 PM5/1/2022 1:47:35 PM</TimeStamp>
+        <ID>
+          <String>Reservation Status</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>qqMV96cAwQM/5aw6riYpqkM/1GY=5/1/2022 2:37:08 PM5/1/2022 1:47:35 PM</TimeStamp>
+        <ID>
+          <String>Arrival Time</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>rqe7egpjJ58wFxaGUdaRWnJkUHA=5/1/2022 2:37:08 PM5/1/2022 1:47:35 PM</TimeStamp>
+        <ID>
+          <String>Reservation Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>AWxS2lUa3YZ8AYlXZxGNoJbbgDc=5/1/2022 2:19:10 PM5/1/2022 1:47:35 PM</TimeStamp>
+        <ID>
+          <String>Hotel Type</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>SDS8ao6PM+Xe4YVcuLCZAQTiroI=5/1/2022 2:19:10 PM5/1/2022 1:47:36 PM</TimeStamp>
+        <ID>
+          <String>Market Segment</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>ISfex9WeANzXb6vczgmJaAg7h1U=5/1/2022 2:19:10 PM5/1/2022 1:47:36 PM</TimeStamp>
+        <ID>
+          <String>Customer</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>4GC/UGx3nZet4yy/sJMD9Djg3Gg=5/1/2022 2:19:10 PM5/1/2022 1:47:36 PM</TimeStamp>
+        <ID>
+          <String>Distribution Channel</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Egmzf2HBrjGO+Hr1Jst21c8vX8M=5/1/2022 2:19:10 PM5/1/2022 1:47:36 PM</TimeStamp>
+        <ID>
+          <String>Deposit Type</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>llya9hsq+HhWRNB7HFj+zi42GO0=5/18/2022 9:30:55 PM5/1/2022 1:47:35 PMztC+XPSV0tAqGvdTD+47TaCBuvg=5/1/2022 1:51:14 PM5/1/2022 1:47:35 PM</TimeStamp>
+        <ID>
+          <String>DB DATAWAREHOUSE</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>wLrxcazWIy7sGmMjms1VBQ0WCtw=5/1/2022 1:22:59 PM5/1/2022 1:22:58 PM</TimeStamp>
+      <ID>
+        <String>SSAS_VIDEO</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2022-05-18T14:34:11.106667Z</LastDeployed>
+</DeploymentSnapshot>

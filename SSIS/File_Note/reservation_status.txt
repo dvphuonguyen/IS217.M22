@@ -1,4 +1,0 @@
-CREATE TABLE [ReservationStatus] (
-    [id_reservation_status] int primary key,
-    [reservation_status] varchar(255)
-)

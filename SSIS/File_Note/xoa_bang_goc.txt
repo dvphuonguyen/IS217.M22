@@ -1,2 +1,0 @@
-delete from [dbo].[DataClean];
-delete from [dbo].[DataNull];

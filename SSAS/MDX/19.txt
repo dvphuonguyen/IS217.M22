@@ -1,4 +1,0 @@
-SELECT NON EMPTY {[Reservation Date].[Reservation Date Year].CHILDREN} ON ROWS, 
-		[Measures].[Fact Hotel Booking Count] ON COLUMNS
-FROM [DB DATAWAREHOUSE]
-WHERE ({[Customer].[Country].&[VNM],[Customer].[Country].&[CHN]},[Customer].[Customer Type].&[Transient])

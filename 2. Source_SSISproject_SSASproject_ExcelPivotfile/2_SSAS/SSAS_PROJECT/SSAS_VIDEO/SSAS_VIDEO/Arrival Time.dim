@@ -1,0 +1,590 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="ce8bcac3-9bcc-468a-883d-f350f5e41be0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Arrival Time</ID>
+  <Name>Arrival Time</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-889" scrolltop="22" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7250" y="8449" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ArrivalTime" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5433" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003915000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_ArrivalTime" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-889</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>22</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="201" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="292">
+            <Shape Id="Id Arrival Date" Expanded="false">
+              <Attributes>
+                <Attribute Id="Id Arrival Date" />
+                <Attribute Id="Arrival Date Day Name" />
+                <Attribute Id="Arrival Date Day Name Abbrev" />
+                <Attribute Id="Arrival Date Month Name" />
+                <Attribute Id="Arrival Date Month Name Abbrev" />
+                <Attribute Id="Arrival Date Weekday Flag" />
+              </Attributes>
+              <Position x="221" y="20" />
+            </Shape>
+            <Shape Id="Arrival Date Full" Expanded="false">
+              <Attributes>
+                <Attribute Id="Arrival Date Full" />
+              </Attributes>
+              <Position x="591" y="20" />
+            </Shape>
+            <Shape Id="Arrival Date Day Of Week" Expanded="false">
+              <Attributes>
+                <Attribute Id="Arrival Date Day Of Week" />
+              </Attributes>
+              <Position x="961" y="20" />
+            </Shape>
+            <Shape Id="Arrival Date Week Number" Expanded="false">
+              <Attributes>
+                <Attribute Id="Arrival Date Week Number" />
+              </Attributes>
+              <Position x="1331" y="20" />
+            </Shape>
+            <Shape Id="Arrival Date Day Of Month" Expanded="false">
+              <Attributes>
+                <Attribute Id="Arrival Date Day Of Month" />
+              </Attributes>
+              <Position x="961" y="71" />
+            </Shape>
+            <Shape Id="Arrival Date Month Number" Expanded="false">
+              <Attributes>
+                <Attribute Id="Arrival Date Month Number" />
+              </Attributes>
+              <Position x="1331" y="71" />
+            </Shape>
+            <Shape Id="Arrival Date Quarter" Expanded="false">
+              <Attributes>
+                <Attribute Id="Arrival Date Quarter" />
+              </Attributes>
+              <Position x="1701" y="71" />
+            </Shape>
+            <Shape Id="Arrival Date Year" Expanded="false">
+              <Attributes>
+                <Attribute Id="Arrival Date Year" />
+              </Attributes>
+              <Position x="2071" y="71" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="79b437c9-c46f-41c2-81e6-3efeab94dd8c">
+    <DataSourceViewID>DB DATAWAREHOUSE</DataSourceViewID>
+  </Source>
+  <UnknownMember>Hidden</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="44bdf126-1d38-48fe-ad75-46249e5c8f86">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="c70bc205-6939-4963-b83e-89fa80c0fe73">
+      <ID>Id Arrival Date</ID>
+      <Name>Id Arrival Date</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3255cde2-cf6e-4cc9-811c-55026f11a8d2">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1c6efb41-fd1f-4df5-8569-86d76ae4f7d8">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>id_arrival_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="58cc98a2-4b72-4cd7-beb7-876b6ed297e8">
+          <AttributeID>Arrival Date Full</AttributeID>
+          <Name>Arrival Date Full</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="baf6a67f-abb6-414c-a336-6b1b7e5010f1">
+          <AttributeID>Arrival Date Month Name</AttributeID>
+          <Name>Arrival Date Month Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5e59c021-16c6-465d-8130-04aea21f95b1">
+          <AttributeID>Arrival Date Month Name Abbrev</AttributeID>
+          <Name>Arrival Date Month Name Abbrev</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3b23df02-8dfe-4b33-b089-6d1170c28e53">
+          <AttributeID>Arrival Date Day Name Abbrev</AttributeID>
+          <Name>Arrival Date Day Name Abbrev</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5896b51a-4603-4879-a8af-61da004055ee">
+          <AttributeID>Arrival Date Day Name</AttributeID>
+          <Name>Arrival Date Day Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="be273274-14b2-4e88-8ec4-972109aac82d">
+          <AttributeID>Arrival Date Weekday Flag</AttributeID>
+          <Name>Arrival Date Weekday Flag</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="738ff20c-0bd1-4be6-a377-c85b4aaf94bc">
+      <ID>Arrival Date Full</ID>
+      <Name>Arrival Date Full</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3884b8f2-539e-49af-a84a-4b54da5787b1">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7859b64c-01b7-4e98-a969-85d9dd545cf9">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_full</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="33bf7ff8-5efc-4823-9764-235f49b574fc">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="599b6467-315a-4576-bcc5-a42cf7197f86">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_day_of_month</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="fce3f2e7-508d-4f01-905a-6cd7b1197f3a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7507cf17-c1a4-49c7-9569-b3dc1b8093f2">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_month_number</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="a0157c68-6cc5-4bba-81bd-7d8db4409480">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c9e04223-04cd-444d-80c8-1299a35fc62b">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="5499c097-ed19-40a9-88ab-87cdb52e1470">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="10574a92-120a-4116-81ff-e7a41e9dbff6">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ca27e3b9-4d45-48f3-9123-f259eea62ebd">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="150b9b8e-6d65-4d57-9902-475a21d0b270">
+          <TableID>dbo_ArrivalTime</TableID>
+          <ColumnID>arrival_date_full</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="49ba671d-3093-44b9-994f-a0a4abf7783d">
+          <AttributeID>Arrival Date Day Of Month</AttributeID>
+          <Name>Arrival Date Day Of Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d62509d6-3116-4a31-be6f-f04e1fa3ce40">
+          <AttributeID>Arrival Date Day Of Week</AttributeID>
+          <Name>Arrival Date Day Of Week</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e417c756-caec-4a12-865c-a4e0c3738c0a">
+      <ID>Arrival Date Year</ID>
+      <Name>Arrival Date Year</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="27b1b8aa-b185-4e0f-8af1-5c6f3c3d3bc6">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fc1c6237-653a-43d1-a407-ad9e64479d92">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b070270a-7de0-47c6-aa64-4cf069a6249f">
+      <ID>Arrival Date Quarter</ID>
+      <Name>Arrival Date Quarter</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8b038f29-98b5-4f05-93b4-f2af4b5b4b90">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b0e7ab0d-94b4-4b35-9a9f-ef405c642e5d">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="cd97b57f-67d5-4868-a3f0-706fcea445c8">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b59e15d8-0f3b-4281-bffc-839918c20d31">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="63ef6931-2c27-4f2e-abf2-fd1ca4bec64e">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="09448ad1-43a5-47c2-b7ee-5829c015a85b">
+          <TableID>dbo_ArrivalTime</TableID>
+          <ColumnID>arrival_date_quarter</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c0938720-7a78-4693-9d7a-95de84a66d82">
+          <AttributeID>Arrival Date Year</AttributeID>
+          <Name>Arrival Date Year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="08fd3774-466d-4bf4-8574-bef169343ee5">
+      <ID>Arrival Date Month Number</ID>
+      <Name>Arrival Date Month Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="67ea3aed-9514-445c-8391-1a3dfe281568">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8f19c68a-2b9c-45a2-94e2-52932548c1b2">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_month_number</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="c68dae8d-2daf-4e94-bc22-3b46cb89808e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6f60a994-ec0c-4105-a8c8-2eb29888dd1e">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="958df6f9-0725-4806-9daa-7bf204b582b0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8084be3b-f59e-4373-967f-c49c5223aa12">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="338dc384-01de-40b0-affa-3a349071f2eb">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="dee7065e-d0c6-4cb8-bece-b1c4561d658e">
+          <TableID>dbo_ArrivalTime</TableID>
+          <ColumnID>arrival_date_month_number</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="63b1d316-78e4-4a77-9d7f-2fc5277bb2d2">
+          <AttributeID>Arrival Date Quarter</AttributeID>
+          <Name>Arrival Date Quarter</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a7454ba4-5999-45b6-a7f2-2800a54e56f0">
+      <ID>Arrival Date Month Name</ID>
+      <Name>Arrival Date Month Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="36799ee8-1231-4855-a3da-84ae3a642858">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="97665f43-4bfc-48cd-812b-f8b6b1eb784b">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_month_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6f007cee-d540-45b1-8c89-dc3994922e73">
+      <ID>Arrival Date Month Name Abbrev</ID>
+      <Name>Arrival Date Month Name Abbrev</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8708acb9-9080-48b4-abf3-bf20297ba3b3">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b2b789f2-9ff4-436a-b16d-14541a19d31c">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_month_name_abbrev</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a6ac2584-4f60-4eb7-b8b0-5be9311e4ce8">
+      <ID>Arrival Date Week Number</ID>
+      <Name>Arrival Date Week Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9561cdf6-ef5c-4b7b-a475-f069c886c96a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f3b116cb-8e5b-48be-bf02-88b2711a51ef">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_week_number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="42cb9d96-b8b9-4c55-bfce-7bc8fa851cce">
+      <ID>Arrival Date Day Of Month</ID>
+      <Name>Arrival Date Day Of Month</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d884a6ce-4b3f-4694-8d36-b41a530cde31">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7e2cbc70-deba-4b75-ba37-1549eac4e8f0">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_day_of_month</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="6bd168da-25fd-441c-9d0b-f79a9f4c3a48">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ad96b533-da16-44d8-94e1-d0f6c8a3c626">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_month_number</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="da160de7-1452-4bf1-b2dd-988d252531d0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4f1fd574-cb73-4817-8fe1-64292f0fcfc9">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="052ab4be-6d98-43a7-91c5-1376655ef56c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d9279b13-f298-47ca-b7de-55c0a93d3196">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="a05f8f3c-5bef-42a6-87eb-6ae936a7ffdd">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="7ece358c-08ab-45da-af42-9cb1dcfffde9">
+          <TableID>dbo_ArrivalTime</TableID>
+          <ColumnID>arrival_date_day_of_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="7cbb2d8b-4537-4e60-bd38-ffa0038f5b32">
+          <AttributeID>Arrival Date Month Number</AttributeID>
+          <Name>Arrival Date Month Number</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="15f5dcc8-edfa-4157-a490-11913b211036">
+      <ID>Arrival Date Day Of Week</ID>
+      <Name>Arrival Date Day Of Week</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="97c6e01b-ba96-4704-8838-a7ae83c988b9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fa0e09eb-d8a1-471a-8e3d-7caab55187de">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_day_of_week</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="3aff90d8-7efc-44dd-963a-355de0f705c7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2dd3e239-a393-4e0f-9d6e-bad0c1c595bf">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_week_number</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="99a425fb-db07-41d5-b3ce-c5055efe86f8">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f31e4911-2732-4562-a222-703d89dbcfa2">
+          <TableID>dbo_ArrivalTime</TableID>
+          <ColumnID>arrival_date_day_of_week</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="e8f12772-7aa0-45df-8518-3764166dce7f">
+          <AttributeID>Arrival Date Week Number</AttributeID>
+          <Name>Arrival Date Week Number</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d37381cb-8ad6-461a-a4a5-35f454592e3d">
+      <ID>Arrival Date Day Name Abbrev</ID>
+      <Name>Arrival Date Day Name Abbrev</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5bc48197-c6e7-4543-a2fb-8171f16d2591">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a6954d70-3f35-461c-a7b3-c9b6cbab3efd">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_day_name_abbrev</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="53d7491c-8bd0-4ddf-b159-a7bf92f1e902">
+      <ID>Arrival Date Day Name</ID>
+      <Name>Arrival Date Day Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e998b75b-c1d5-43c6-9810-4a7659f4b29f">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="efa97db3-b9e2-4e5b-9329-ac557d0f5b9b">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_day_name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="efee63f6-2c94-4f16-9507-45f99c94cae6">
+      <ID>Arrival Date Weekday Flag</ID>
+      <Name>Arrival Date Weekday Flag</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8aeeb9c1-54a4-4f52-87d2-4e609a8b639e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0fe7fd48-f579-416f-acc6-ee92b7ec4482">
+            <TableID>dbo_ArrivalTime</TableID>
+            <ColumnID>arrival_date_weekday_flag</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="0bb41d6b-2ffa-4676-ad9a-7b590fd5823c">
+      <ID>Hierarchy</ID>
+      <Name>PhanCapNgayNhanPhong(YQMDD)</Name>
+      <Levels>
+        <Level dwd:design-time-name="e64dd944-3c4e-467b-beb5-743f3fe7fab3">
+          <ID>Arrival Date Year</ID>
+          <Name>Arrival Date Year</Name>
+          <SourceAttributeID>Arrival Date Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="41e4921b-a224-48b8-99b7-0b09b08fa353">
+          <ID>Arrival Date Quarter</ID>
+          <Name>Arrival Date Quarter</Name>
+          <SourceAttributeID>Arrival Date Quarter</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="7d8b7f16-6715-4c78-933b-d23fdca11eec">
+          <ID>Arrival Date Month Number</ID>
+          <Name>Arrival Date Month Number</Name>
+          <SourceAttributeID>Arrival Date Month Number</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="f669f30b-c7a2-413a-bd56-539f22b8d3c0">
+          <ID>Arrival Date Day Of Month</ID>
+          <Name>Arrival Date Day Of Month</Name>
+          <SourceAttributeID>Arrival Date Day Of Month</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="bdac7f4c-2b21-4af5-8105-10d8043215b5">
+          <ID>Arrival Date Full</ID>
+          <Name>Arrival Date Full</Name>
+          <SourceAttributeID>Arrival Date Full</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="668b8fd1-28ca-400e-8d0b-3219bac60a43">
+      <ID>Hierarchy 1</ID>
+      <Name>PhanCapNgayNhanPhong(WDD)</Name>
+      <Levels>
+        <Level dwd:design-time-name="f0f73848-ed5a-4dc2-abbd-2b20853fb922">
+          <ID>Arrival Date Week Number</ID>
+          <Name>Arrival Date Week Number</Name>
+          <SourceAttributeID>Arrival Date Week Number</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="13736eeb-b343-4ff1-8982-2e00d88fa283">
+          <ID>Arrival Date Day Of Week</ID>
+          <Name>Arrival Date Day Of Week</Name>
+          <SourceAttributeID>Arrival Date Day Of Week</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b96325b5-1007-4cb9-a019-5af6b4cfdf5a">
+          <ID>Arrival Date Full</ID>
+          <Name>Arrival Date Full</Name>
+          <SourceAttributeID>Arrival Date Full</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="107d5e15-89c8-47ed-897a-f5312f96d02b">
+      <ID>Hierarchy 2</ID>
+      <Name>PhanCapNgayNhanPhong(YM)</Name>
+      <Levels>
+        <Level dwd:design-time-name="7f581d14-b11c-44eb-a9ca-1fcd21e473ed">
+          <ID>Arrival Date Year</ID>
+          <Name>Arrival Date Year</Name>
+          <SourceAttributeID>Arrival Date Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="c9506711-a3a1-4cd3-9fa2-9e8a2d54692f">
+          <ID>Arrival Date Month Number</ID>
+          <Name>Arrival Date Month Number</Name>
+          <SourceAttributeID>Arrival Date Month Number</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

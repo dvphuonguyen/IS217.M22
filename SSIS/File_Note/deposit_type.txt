@@ -1,4 +1,0 @@
-CREATE TABLE [DepositType] (
-    [id_deposit_type] int primary key,
-    [deposit_type] varchar(255)
-)

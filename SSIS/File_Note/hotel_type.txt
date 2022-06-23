@@ -1,4 +1,0 @@
-CREATE TABLE [HotelType] (
-    [id_hotel_type] int primary key,
-    [hotel_type] varchar(255)
-)

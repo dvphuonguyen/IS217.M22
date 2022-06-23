@@ -1,4 +1,0 @@
-CREATE TABLE [DistributionChannel] (
-    [id_distribution_channel] int primary key,
-    [distribution_channel] varchar(255)
-)
